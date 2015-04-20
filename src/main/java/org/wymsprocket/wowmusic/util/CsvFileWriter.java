@@ -6,31 +6,24 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-import org.wymsprocket.wowmusic.model.MusicFileInfo;
+public class CsvFileWriter<T extends Object> {
 
-public class CsvFileWriter {
+	private List<T> objects;
 
-    private List<MusicFileInfo> musicFileInfos;
+	public List<T> getObjects() {
+		return objects;
+	}
 
-    public CsvFileWriter(List<MusicFileInfo> musicFileInfos) {
-        this.musicFileInfos = musicFileInfos;
-    }
+	public void setObjects(List<T> objects) {
+		this.objects = objects;
+	}
 
-    public List<MusicFileInfo> getMusicFileInfos() {
-        return musicFileInfos;
-    }
-
-    public void setMusicFileInfos(List<MusicFileInfo> musicFileInfos) {
-        this.musicFileInfos = musicFileInfos;
-    }
-
-    public void writeTo(File csvFile) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(csvFile));
-        for(MusicFileInfo musicFileInfo : this.musicFileInfos) {
-            writer.write(musicFileInfo + "\n");
-        }
-        writer.flush();
-        writer.close();
-    }
-
+	public void writeTo(File csvFile) throws IOException {
+		BufferedWriter writer = new BufferedWriter(new FileWriter(csvFile));
+		for (Object object : this.objects) {
+			writer.write(object + "\n");
+		}
+		writer.flush();
+		writer.close();
+	}
 }

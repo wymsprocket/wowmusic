@@ -11,7 +11,7 @@ import java.util.List;
 import org.jukito.All;
 import org.jukito.JukitoModule;
 import org.wymsprocket.wowmusic.model.MusicFileInfo;
-import org.wymsprocket.wowmusic.util.CsvFileReader;
+import org.wymsprocket.wowmusic.util.MusicFileInfoCsvFileReader;
 
 //@RunWith(JukitoRunner.class)
 public class ReadAndWriteTest {
@@ -25,7 +25,7 @@ public class ReadAndWriteTest {
 
     //@Test
     public void readDataFile(@All("dataFile") File dataFile) throws IOException {
-        CsvFileReader reader = new CsvFileReader(dataFile);
+        MusicFileInfoCsvFileReader reader = new MusicFileInfoCsvFileReader(dataFile);
         List<MusicFileInfo> musicFileInfos = reader.read();
 
         assertNotNull(musicFileInfos);

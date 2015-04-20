@@ -13,12 +13,12 @@ import org.wymsprocket.wowmusic.model.MusicFileInfo;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
-public class CsvFileReader {
+public class MusicFileInfoCsvFileReader {
 
     private File csvFile;
     private List<MusicFileInfo> musicFileInfos = new ArrayList<MusicFileInfo>();
 
-    public CsvFileReader(File csvFile) {
+    public MusicFileInfoCsvFileReader(File csvFile) {
         if(csvFile.isDirectory()) {
             throw new RuntimeException("Csv file can not be a directory.");
         } else if(!csvFile.exists()) {

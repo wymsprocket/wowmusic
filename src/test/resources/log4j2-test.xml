@@ -9,6 +9,6 @@
     <Root level="ERROR">
       <AppenderRef ref="Console"/>
     </Root>
-    <Logger name="org.wymsprocket.wowmusic" level="TRACE"/>
+    <Logger name="org.wymsprocket.wowmusic" level="DEBUG"/>
   </Loggers>
 </Configuration>
