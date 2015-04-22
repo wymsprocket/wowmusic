@@ -8,16 +8,16 @@
 10,Duskwood,World of Warcraft,Eastern Kingdoms,0,ZONE
 139,Eastern Plaguelands,World of Warcraft,Eastern Kingdoms,0,ZONE
 12,Elwynn Forest,World of Warcraft,Eastern Kingdoms,0,ZONE
-3430,Eversong Woods,World of Warcraft,Eastern Kingdoms,0,ZONE
-3433,Ghostlands,World of Warcraft,Eastern Kingdoms,0,ZONE
+3430,Eversong Woods,The Burning Crusade,Eastern Kingdoms,0,ZONE
+3433,Ghostlands,The Burning Crusade,Eastern Kingdoms,0,ZONE
 267,Hillsbrad Foothills,World of Warcraft,Eastern Kingdoms,0,ZONE
 1537,Ironforge,World of Warcraft,Eastern Kingdoms,0,ZONE
-4080,Isle of Quel'Danas,World of Warcraft,Eastern Kingdoms,0,ZONE
+4080,Isle of Quel'Danas,The Burning Crusade,Eastern Kingdoms,0,ZONE
 38,Loch Modan,World of Warcraft,Eastern Kingdoms,0,ZONE
 33,Northern Stranglethorn,World of Warcraft,Eastern Kingdoms,0,ZONE
 44,Redridge Mountains,World of Warcraft,Eastern Kingdoms,0,ZONE
 51,Searing Gorge,World of Warcraft,Eastern Kingdoms,0,ZONE
-3487,Silvermoon City,World of Warcraft,Eastern Kingdoms,0,ZONE
+3487,Silvermoon City,The Burning Crusade,Eastern Kingdoms,0,ZONE
 130,Silverpine Forest,World of Warcraft,Eastern Kingdoms,0,ZONE
 1519,Stormwind City,World of Warcraft,Eastern Kingdoms,0,ZONE
 5339,Stranglethorn Vale,World of Warcraft,Eastern Kingdoms,0,ZONE
@@ -31,8 +31,8 @@
 11,Wetlands,World of Warcraft,Eastern Kingdoms,0,ZONE
 331,Ashenvale,World of Warcraft,Kalimdor,0,ZONE
 16,Azshara,World of Warcraft,Kalimdor,0,ZONE
-3524,Azuremyst Isle,World of Warcraft,Kalimdor,0,ZONE
-3525,Bloodmyst Isle,World of Warcraft,Kalimdor,0,ZONE
+3524,Azuremyst Isle,The Burning Crusade,Kalimdor,0,ZONE
+3525,Bloodmyst Isle,The Burning Crusade,Kalimdor,0,ZONE
 148,Darkshore,World of Warcraft,Kalimdor,0,ZONE
 1657,Darnassus,World of Warcraft,Kalimdor,0,ZONE
 405,Desolace,World of Warcraft,Kalimdor,0,ZONE
@@ -50,7 +50,7 @@
 406,Stonetalon Mountains,World of Warcraft,Kalimdor,0,ZONE
 440,Tanaris,World of Warcraft,Kalimdor,0,ZONE
 141,Teldrassil,World of Warcraft,Kalimdor,0,ZONE
-3557,The Exodar,World of Warcraft,Kalimdor,0,ZONE
+3557,The Exodar,The Burning Crusade,Kalimdor,0,ZONE
 457,The Veiled Sea,World of Warcraft,Kalimdor,0,ZONE
 400,Thousand Needles,World of Warcraft,Kalimdor,0,ZONE
 1638,Thunder Bluff,World of Warcraft,Kalimdor,0,ZONE
@@ -76,14 +76,14 @@
 2717,Molten Core,World of Warcraft,Eastern Kingdoms,46,RAID
 3429,Ruins of Ahn'Qiraj,World of Warcraft,Kalimdor,1377,RAID
 3428,Temple of Ahn'Qiraj,World of Warcraft,Kalimdor,1377,RAID
-2597,Alterac Valley,World of Warcraft,null,0,BATTLEGROUND
-3358,Arathi Basin,World of Warcraft,null,0,BATTLEGROUND
-3277,Warsong Gulch,World of Warcraft,null,0,BATTLEGROUND
+2597,Alterac Valley,World of Warcraft,Eastern Kingdoms,0,BATTLEGROUND
+3358,Arathi Basin,World of Warcraft,Eastern Kingdoms,0,BATTLEGROUND
+3277,Warsong Gulch,World of Warcraft,Kalimdor,0,BATTLEGROUND
 209,Shadowfang Keep,World of Warcraft,Eastern Kingdoms,130,DUNGEON
 1581,The Deadmines,World of Warcraft,Eastern Kingdoms,40,DUNGEON
-3702,Blade's Edge Arena (Blade's Edge Arena),World of Warcraft,null,0,UNKNOWN
-3698,Nagrand Arena (Nagrand Arena),World of Warcraft,null,0,UNKNOWN
-3968,Ruins of Lordaeron (Undercity Arena),World of Warcraft,null,0,UNKNOWN
+3702,Blade's Edge Arena (Blade's Edge Arena),The Burning Crusade,Outland,0,UNKNOWN
+3698,Nagrand Arena (Nagrand Arena),The Burning Crusade,Outland,0,UNKNOWN
+3968,Ruins of Lordaeron (Undercity Arena),World of Warcraft,Eastern Kingdoms,0,UNKNOWN
 3522,Blade's Edge Mountains,The Burning Crusade,Outland,0,ZONE
 3483,Hellfire Peninsula,The Burning Crusade,Outland,0,ZONE
 3518,Nagrand,The Burning Crusade,Outland,0,ZONE
@@ -100,7 +100,7 @@
 3457,Karazhan,The Burning Crusade,Eastern Kingdoms,41,RAID
 4075,Sunwell Plateau,The Burning Crusade,Eastern Kingdoms,4080,RAID
 3845,Tempest Keep: The Eye,The Burning Crusade,Outland,3523,RAID
-3820,Eye of the Storm,The Burning Crusade,null,0,BATTLEGROUND
+3820,Eye of the Storm,The Burning Crusade,Outland,0,BATTLEGROUND
 3790,Auchindoun: Auchenai Crypts,The Burning Crusade,Outland,3519,DUNGEON
 3792,Auchindoun: Mana-Tombs,The Burning Crusade,Outland,3519,DUNGEON
 3791,Auchindoun: Sethekk Halls,The Burning Crusade,Outland,3519,DUNGEON
@@ -130,8 +130,8 @@
 67,The Storm Peaks,Wrath of the Lich King,Northrend,0,ZONE
 4197,Wintergrasp,Wrath of the Lich King,Northrend,0,ZONE
 66,Zul'Drak,Wrath of the Lich King,Northrend,0,ZONE
-4710,Isle of Conquest,Wrath of the Lich King,null,0,BATTLEGROUND
-4384,Strand of the Ancients,Wrath of the Lich King,null,0,BATTLEGROUND
+4710,Isle of Conquest,Wrath of the Lich King,The Maelstrom,0,BATTLEGROUND
+4384,Strand of the Ancients,Wrath of the Lich King,The Maelstrom,0,BATTLEGROUND
 4494,Azjol-Nerub: Ahn'kahet: The Old Kingdom,Wrath of the Lich King,Northrend,65,DUNGEON
 4277,Azjol-Nerub: Azjol-Nerub,Wrath of the Lich King,Northrend,65,DUNGEON
 4100,Caverns of Time: The Culling of Stratholme,Wrath of the Lich King,Kalimdor,440,DUNGEON
@@ -148,10 +148,10 @@
 4264,Ulduar: Halls of Stone,Wrath of the Lich King,Northrend,67,DUNGEON
 206,Utgarde Keep: Utgarde Keep,Wrath of the Lich King,Northrend,495,DUNGEON
 1196,Utgarde Keep: Utgarde Pinnacle,Wrath of the Lich King,Northrend,495,DUNGEON
-4378,Dalaran Arena (Arena),Wrath of the Lich King,null,0,UNKNOWN
-4406,The Ring of Valor (Orgrimmar Arena),Wrath of the Lich King,null,0,UNKNOWN
+4378,Dalaran Arena (Arena),Wrath of the Lich King,Northrend,0,UNKNOWN
+4406,The Ring of Valor (Orgrimmar Arena),Cataclysm,Kalimdor,0,UNKNOWN
 3456,Naxxramas,Wrath of the Lich King,Northrend,65,RAID
-2159,Onyxia's Lair,Wrath of the Lich King,Kalimdor,15,RAID
+2159,Onyxia's Lair,World of Warcraft,Kalimdor,15,RAID
 4500,The Nexus: The Eye of Eternity,Wrath of the Lich King,Northrend,3537,RAID
 4273,Ulduar,Wrath of the Lich King,Northrend,67,RAID
 4603,Vault of Archavon,Wrath of the Lich King,Northrend,4197,RAID
@@ -167,7 +167,7 @@
 5145,Vashj'ir: Abyssal Depths,Cataclysm,Eastern Kingdoms,0,ZONE
 4815,Vashj'ir: Kelp'thar Forest,Cataclysm,Eastern Kingdoms,0,ZONE
 5144,Vashj'ir: Shimmering Expanse,Cataclysm,Eastern Kingdoms,0,ZONE
-5695,Ahn'Qiraj: The Fallen Kingdom,Cataclysm,Kalimdor,0,ZONE
+5695,Ahn'Qiraj: The Fallen Kingdom,World of Warcraft,Kalimdor,0,ZONE
 5733,Molten Front,Cataclysm,Kalimdor,0,ZONE
 616,Mount Hyjal,Cataclysm,Kalimdor,0,ZONE
 5034,Uldum,Cataclysm,Kalimdor,0,ZONE
@@ -178,8 +178,8 @@
 5416,The Maelstrom,Cataclysm,The Maelstrom,0,ZONE
 5095,Tol Barad,Cataclysm,The Maelstrom,0,ZONE
 5389,Tol Barad Peninsula,Cataclysm,The Maelstrom,0,ZONE
-5449,The Battle for Gilneas,Cataclysm,null,0,BATTLEGROUND
-5031,Twin Peaks,Cataclysm,null,0,BATTLEGROUND
+5449,The Battle for Gilneas,Cataclysm,Eastern Kingdoms,0,BATTLEGROUND
+5031,Twin Peaks,Cataclysm,Eastern Kingdoms,0,BATTLEGROUND
 5004,Abyssal Maw: Throne of the Tides,Cataclysm,Eastern Kingdoms,5145,DUNGEON
 4926,Blackrock Caverns,Cataclysm,Eastern Kingdoms,46,DUNGEON
 5789,End Time,Cataclysm,Kalimdor,440,DUNGEON
@@ -198,17 +198,17 @@
 5723,Firelands,Cataclysm,Kalimdor,616,RAID
 5334,The Bastion of Twilight,Cataclysm,Eastern Kingdoms,4922,RAID
 5638,Throne of the Four Winds,Cataclysm,Kalimdor,5034,RAID
-6298,Brawl'gar Arena,Mists of Pandaria,null,0,ZONE
-6176,Coldridge Valley,Mists of Pandaria,Eastern Kingdoms,0,ZONE
-6454,Deathknell,Mists of Pandaria,Eastern Kingdoms,0,ZONE
-6457,New Tinkertown,Mists of Pandaria,Eastern Kingdoms,0,ZONE
-6170,Northshire,Mists of Pandaria,Eastern Kingdoms,0,ZONE
-6455,Sunstrider Isle,Mists of Pandaria,Eastern Kingdoms,0,ZONE
-6456,Ammen Vale,Mists of Pandaria,Kalimdor,0,ZONE
-6452,Camp Narache,Mists of Pandaria,Kalimdor,0,ZONE
-6453,Echo Isles,Mists of Pandaria,Kalimdor,0,ZONE
-6450,Shadowglen,Mists of Pandaria,Kalimdor,0,ZONE
-6451,Valley of Trials,Mists of Pandaria,Kalimdor,0,ZONE
+6298,Brawl'gar Arena,Mists of Pandaria,Kalimdor,0,ZONE
+6176,Coldridge Valley,World of Warcraft,Eastern Kingdoms,0,ZONE
+6454,Deathknell,World of Warcraft,Eastern Kingdoms,0,ZONE
+6457,New Tinkertown,Cataclysm,Eastern Kingdoms,0,ZONE
+6170,Northshire,World of Warcraft,Eastern Kingdoms,0,ZONE
+6455,Sunstrider Isle,The Burning Crusade,Eastern Kingdoms,0,ZONE
+6456,Ammen Vale,The Burning Crusade,Kalimdor,0,ZONE
+6452,Camp Narache,World of Warcraft,Kalimdor,0,ZONE
+6453,Echo Isles,Cataclysm,Kalimdor,0,ZONE
+6450,Shadowglen,World of Warcraft,Kalimdor,0,ZONE
+6451,Valley of Trials,World of Warcraft,Kalimdor,0,ZONE
 5736,The Wandering Isle,Mists of Pandaria,The Maelstrom,0,ZONE
 6138,Dread Wastes,Mists of Pandaria,Pandaria,0,ZONE
 6661,Isle of Giants,Mists of Pandaria,Pandaria,0,ZONE
@@ -223,9 +223,9 @@
 5842,Townlong Steppes,Mists of Pandaria,Pandaria,0,ZONE
 5840,Vale of Eternal Blossoms,Mists of Pandaria,Pandaria,0,ZONE
 5805,Valley of the Four Winds,Mists of Pandaria,Pandaria,0,ZONE
-6665,Deepwind Gorge,Mists of Pandaria,null,0,BATTLEGROUND
-6126,Silvershard Mines,Mists of Pandaria,null,0,BATTLEGROUND
-6051,Temple of Kotmogu,Mists of Pandaria,null,0,BATTLEGROUND
+6665,Deepwind Gorge,Mists of Pandaria,Pandaria,0,BATTLEGROUND
+6126,Silvershard Mines,Mists of Pandaria,Eastern Kingdoms,0,BATTLEGROUND
+6051,Temple of Kotmogu,Mists of Pandaria,Pandaria,0,BATTLEGROUND
 5976,Gate of the Setting Sun,Mists of Pandaria,Pandaria,5840,DUNGEON
 6182,Mogu'shan Palace,Mists of Pandaria,Pandaria,5840,DUNGEON
 6052,Scarlet Halls,Mists of Pandaria,Eastern Kingdoms,85,DUNGEON
@@ -235,8 +235,8 @@
 6214,Siege of Niuzao Temple,Mists of Pandaria,Pandaria,5842,DUNGEON
 5963,Stormstout Brewery,Mists of Pandaria,Pandaria,5805,DUNGEON
 5956,Temple of the Jade Serpent,Mists of Pandaria,Pandaria,5785,DUNGEON
-6732,The Tiger's Peak,Mists of Pandaria,null,0,UNKNOWN
-6296,Tol'viron Arena,Mists of Pandaria,null,0,UNKNOWN
+6732,The Tiger's Peak,Mists of Pandaria,Pandaria,0,UNKNOWN
+6296,Tol'viron Arena,Mists of Pandaria,Kalimdor,0,UNKNOWN
 6297,Heart of Fear,Mists of Pandaria,Pandaria,6138,RAID
 6125,Mogu'shan Vaults,Mists of Pandaria,Pandaria,5841,RAID
 6738,Siege of Orgrimmar,Mists of Pandaria,Pandaria,5840,RAID
@@ -269,7 +269,7 @@
 6673,To the Skies,Mists of Pandaria,Pandaria,0,SCENARIO
 6716,Troves of the Thunder King,Mists of Pandaria,Pandaria,0,SCENARIO
 6309,Unga Ingoo,Mists of Pandaria,Pandaria,0,SCENARIO
-7025,Tanaan Jungle,Warlords of Draenor,null,0,ZONE
+7025,Tanaan Jungle,Warlords of Draenor,Draenor,0,ZONE
 6941,Ashran,Warlords of Draenor,Draenor,0,ZONE
 7083,Defense of Karabor,Warlords of Draenor,Draenor,0,ZONE
 6756,Faralohn,Warlords of Draenor,Draenor,0,ZONE
@@ -284,7 +284,7 @@
 7332,Stormshield,Warlords of Draenor,Draenor,0,ZONE
 6662,Talador,Warlords of Draenor,Draenor,0,ZONE
 7333,Warspear,Warlords of Draenor,Draenor,0,ZONE
-7107,Tarren Mill vs Southshore,Warlords of Draenor,null,0,BATTLEGROUND
+7107,Tarren Mill vs Southshore,Warlords of Draenor,Eastern Kingdoms,0,BATTLEGROUND
 6912,Auchindoun,Warlords of Draenor,Draenor,6662,DUNGEON
 6874,Bloodmaul Slag Mines,Warlords of Draenor,Draenor,6720,DUNGEON
 6984,Grimrail Depot,Warlords of Draenor,Draenor,6721,DUNGEON
@@ -292,9 +292,9 @@
 6932,Shadowmoon Burial Grounds,Warlords of Draenor,Draenor,6719,DUNGEON
 6988,Skyreach,Warlords of Draenor,Draenor,6722,DUNGEON
 7109,The Everbloom,Warlords of Draenor,Draenor,6721,DUNGEON
-7307,Upper Blackrock Spire,Warlords of Draenor,null,0,DUNGEON
+7307,Upper Blackrock Spire,Warlords of Draenor,Eastern Kingdoms,0,DUNGEON
 6967,Blackrock Foundry,Warlords of Draenor,Draenor,6721,RAID
-6996,Highmaul,Warlords of Draenor,null,0,RAID
+6996,Highmaul,Warlords of Draenor,Draenor,0,RAID
 7519,Edge of Reality,Warlords of Draenor,Draenor,0,SCENARIO
 6960,The Battle of Thunder Pass,Warlords of Draenor,Draenor,0,SCENARIO
 7462,The Coliseum,Warlords of Draenor,Draenor,0,SCENARIO

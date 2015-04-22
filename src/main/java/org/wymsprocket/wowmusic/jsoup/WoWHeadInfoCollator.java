@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,7 @@ import java.util.Map;
 import org.jsoup.nodes.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.wymsprocket.wowmusic.model.WoWHeadMusicFileInfo;
 import org.wymsprocket.wowmusic.model.WoWHeadZone;
 import org.wymsprocket.wowmusic.model.WoWHeadZoneInfo;
 
@@ -51,6 +53,15 @@ public class WoWHeadInfoCollator {
 			}
 		}
 		return wowHeadZones;
+	}
+
+	public List<WoWHeadMusicFileInfo> getWoWHeadMusicFileInfos() throws IOException {
+	    List<WoWHeadMusicFileInfo> wowHeadMusicFilesInfos = new ArrayList<WoWHeadMusicFileInfo>();
+	    for(WoWHeadZone wowHeadZone : getWoWHeadZones()) {
+	        wowHeadMusicFilesInfos.addAll(wowHeadZone.getWowHeadMusicFileInfos());
+	    }
+	    Collections.sort(wowHeadMusicFilesInfos);
+	    return wowHeadMusicFilesInfos;
 	}
 
 	public WoWHeadZone getWoWHeadZone(WoWHeadZoneInfo wowHeadZoneInfo) throws IOException {

@@ -9,7 +9,7 @@ import org.wymsprocket.wowmusic.model.WoWHeadZoneInfo;
 public class WoWHeadMappingsProperties extends Properties {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -4800131456670620668L;
 
@@ -32,5 +32,13 @@ public class WoWHeadMappingsProperties extends Properties {
 
 	public String getType(int id) {
 		return (String) get("type." + id);
+	}
+
+    public String getZoneExpansion(int id) {
+        return (String) get("zone-expansion." + id);
+    }
+
+	public String getZoneContinent(int id) {
+	    return (String) get("zone-continent." + id);
 	}
 }

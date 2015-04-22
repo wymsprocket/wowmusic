@@ -1,5 +1,7 @@
 package org.wymsprocket.wowmusic.model;
 
+import java.util.List;
+
 public class WoWHeadZone {
 
 	public enum Type {
@@ -32,6 +34,7 @@ public class WoWHeadZone {
 	private String continent;
 	private int location;
 	private String expansion;
+	private List<WoWHeadMusicFileInfo> wowHeadMusicFileInfos;
 
 	public WoWHeadZone() {
 	}
@@ -84,7 +87,16 @@ public class WoWHeadZone {
 		this.expansion = expansion;
 	}
 
-	@Override
+
+	public List<WoWHeadMusicFileInfo> getWowHeadMusicFileInfos() {
+        return wowHeadMusicFileInfos;
+    }
+
+    public void setWowHeadMusicFileInfos(List<WoWHeadMusicFileInfo> wowHeadMusicFileInfos) {
+        this.wowHeadMusicFileInfos = wowHeadMusicFileInfos;
+    }
+
+    @Override
 	public String toString() {
 		return String.format("%d,%s,%s,%s,%d,%s", getId(), getName(), getExpansion(), getContinent(), getLocation(), getType());
 	}
