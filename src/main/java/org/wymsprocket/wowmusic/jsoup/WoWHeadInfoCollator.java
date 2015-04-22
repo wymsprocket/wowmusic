@@ -36,6 +36,7 @@ public class WoWHeadInfoCollator {
 		Map<Integer, WoWHeadZone> zoneMap = new HashMap<Integer, WoWHeadZone>();
 
 		for (WoWHeadZoneInfo wowHeadZoneInfo : wowHeadZoneInfos) {
+
 			WoWHeadZone wowHeadZone = getWoWHeadZone(wowHeadZoneInfo);
 			wowHeadZones.add(wowHeadZone);
 			zoneMap.put(wowHeadZone.getId(), wowHeadZone);
@@ -56,19 +57,23 @@ public class WoWHeadInfoCollator {
 	}
 
 	public List<WoWHeadMusicFileInfo> getWoWHeadMusicFileInfos() throws IOException {
-	    List<WoWHeadMusicFileInfo> wowHeadMusicFilesInfos = new ArrayList<WoWHeadMusicFileInfo>();
-	    for(WoWHeadZone wowHeadZone : getWoWHeadZones()) {
-	        wowHeadMusicFilesInfos.addAll(wowHeadZone.getWowHeadMusicFileInfos());
-	    }
-	    Collections.sort(wowHeadMusicFilesInfos);
-	    return wowHeadMusicFilesInfos;
+		List<WoWHeadMusicFileInfo> wowHeadMusicFilesInfos = new ArrayList<WoWHeadMusicFileInfo>();
+		for (WoWHeadZone wowHeadZone : getWoWHeadZones()) {
+			wowHeadMusicFilesInfos.addAll(wowHeadZone.getWowHeadMusicFileInfos());
+		}
+		Collections.sort(wowHeadMusicFilesInfos);
+		return wowHeadMusicFilesInfos;
 	}
 
 	public WoWHeadZone getWoWHeadZone(WoWHeadZoneInfo wowHeadZoneInfo) throws IOException {
-		URL url = new URL("http://www.wowhead.com/zone=" + wowHeadZoneInfo.getId());
-		JSoupURLReader reader = new JSoupURLReader(url);
-		Document document = reader.read();
-		return getWoWHeadZone(wowHeadZoneInfo, document);
+		if (wowHeadZoneInfo.getId() > 0) {
+			URL url = new URL("http://www.wowhead.com/zone=" + wowHeadZoneInfo.getId());
+			JSoupURLReader reader = new JSoupURLReader(url);
+			Document document = reader.read();
+			return getWoWHeadZone(wowHeadZoneInfo, document);
+		} else {
+			return getVirtualWoWHeadZone(wowHeadZoneInfo);
+		}
 	}
 
 	public WoWHeadZone getWoWHeadZone(WoWHeadZoneInfo wowHeadZoneInfo, File file) throws IOException {
@@ -81,5 +86,19 @@ public class WoWHeadInfoCollator {
 		WoWHeadZonePageParser zoneParser = new WoWHeadZonePageParser(wowHeadZoneInfo, document);
 		WoWHeadZone wowHeadZone = zoneParser.parse();
 		return wowHeadZone;
+	}
+
+	private WoWHeadZone getVirtualWoWHeadZone(WoWHeadZoneInfo wowHeadZoneInfo) throws IOException {
+		if (wowHeadZoneInfo.getId() == -10) {
+			// URL url = new URL("http://www.wowhead.com/guides/garrisons/jukebox");
+			// JSoupURLReader reader = new JSoupURLReader(url);
+			JSoupFileReader reader = new JSoupFileReader(new File("src/test/resources/Garrison Jukebox - Guides - Wowhead.html"));
+			Document document = reader.read();
+
+			WoWHeadGarrisonJukeboxPageParser garrisonJukeboxParser = new WoWHeadGarrisonJukeboxPageParser(wowHeadZoneInfo, document);
+			WoWHeadZone wowHeadZone = garrisonJukeboxParser.parse();
+			return wowHeadZone;
+		}
+		return null;
 	}
 }

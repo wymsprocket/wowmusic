@@ -17,38 +17,46 @@ import com.google.gson.Gson;
 
 public class WoWHeadZonesPageParser extends JSoupDocumentParser<List<WoWHeadZoneInfo>> {
 
-    private final static Logger logger = LoggerFactory.getLogger(WoWHeadZonesPageParser.class);
+	protected final static Logger logger = LoggerFactory.getLogger(WoWHeadZonesPageParser.class);
 
-    public WoWHeadZonesPageParser(Document document) {
-        super(document);
-    }
+	public WoWHeadZonesPageParser(Document document) {
+		super(document);
+	}
 
-    @Override
-    public List<WoWHeadZoneInfo> parse() {
-        logger.info("Parsing WoWHead zones page...");
-        List<WoWHeadZoneInfo> wowHeadZoneInfos = new ArrayList<WoWHeadZoneInfo>();
+	@Override
+	public List<WoWHeadZoneInfo> parse() {
+		logger.info("Parsing WoWHead zones page...");
+		List<WoWHeadZoneInfo> wowHeadZoneInfos = new ArrayList<WoWHeadZoneInfo>();
 
-        Gson gson = new Gson();
-        Pattern zonedataPattern = Pattern.compile(".*var zonedata=\\{\\};zonedata.zones = (.*);.new Listview.*", Pattern.DOTALL);
+		Gson gson = new Gson();
+		Pattern zonedataPattern = Pattern.compile(".*var zonedata=\\{\\};zonedata.zones = (.*);.new Listview.*", Pattern.DOTALL);
 
-        Elements scriptElements = getDocument().getElementsByTag("script");
-        for(Element scriptElement : scriptElements) {
-            if(!scriptElement.data().isEmpty()) {
-                logger.trace("Parsing script element: {}", scriptElement.data());
-                Matcher matcher = zonedataPattern.matcher(scriptElement.data());
-                if(matcher.matches()) {
-                    logger.info("Found zonedata script element, fetching zones...");
-                    Collections.addAll(wowHeadZoneInfos, gson.fromJson(matcher.group(1), WoWHeadZoneInfo[].class));
-                    break;
-                }
-            }
-        }
+		Elements scriptElements = getDocument().getElementsByTag("script");
+		for (Element scriptElement : scriptElements) {
+			if (!scriptElement.data().isEmpty()) {
+				logger.trace("Parsing script element: {}", scriptElement.data());
+				Matcher matcher = zonedataPattern.matcher(scriptElement.data());
+				if (matcher.matches()) {
+					logger.info("Found zonedata script element, fetching zones...");
+					Collections.addAll(wowHeadZoneInfos, gson.fromJson(matcher.group(1), WoWHeadZoneInfo[].class));
+					break;
+				}
+			}
+		}
 
-        if(wowHeadZoneInfos.isEmpty()) {
-            logger.error("Could not find or parse zonedata script element. The WoWHead page layout may have changed.");
-        } else {
-            Collections.sort(wowHeadZoneInfos);
-        }
-        return wowHeadZoneInfos;
-    }
+		if (wowHeadZoneInfos.isEmpty()) {
+			logger.error("Could not find or parse zonedata script element. The WoWHead page layout may have changed.");
+		} else {
+			WoWHeadZoneInfo garrisonJukebox = new WoWHeadZoneInfo();
+			garrisonJukebox.setId(-10);
+			garrisonJukebox.setName("Garrison Jukebox");
+			garrisonJukebox.setExpansion(5);
+			garrisonJukebox.setCategory(13);
+			garrisonJukebox.setInstance(10);
+			wowHeadZoneInfos.add(garrisonJukebox);
+
+			Collections.sort(wowHeadZoneInfos);
+		}
+		return wowHeadZoneInfos;
+	}
 }

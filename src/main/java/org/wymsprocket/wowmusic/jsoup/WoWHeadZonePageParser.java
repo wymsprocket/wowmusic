@@ -20,13 +20,17 @@ import com.google.gson.Gson;
 
 public class WoWHeadZonePageParser extends JSoupDocumentParser<WoWHeadZone> {
 
-	private final static Logger logger = LoggerFactory.getLogger(WoWHeadZonePageParser.class);
+	protected final static Logger logger = LoggerFactory.getLogger(WoWHeadZonePageParser.class);
 	private WoWHeadZoneInfo wowHeadZoneInfo;
-	private final static WoWHeadMappingsProperties wowheadMappingsProperties = new WoWHeadMappingsProperties();
+	protected final static WoWHeadMappingsProperties wowheadMappingsProperties = new WoWHeadMappingsProperties();
 
 	public WoWHeadZonePageParser(WoWHeadZoneInfo wowHeadZoneInfo, Document document) {
 		super(document);
 		this.wowHeadZoneInfo = wowHeadZoneInfo;
+	}
+
+	protected WoWHeadZoneInfo getWowHeadZoneInfo() {
+		return wowHeadZoneInfo;
 	}
 
 	@Override
@@ -56,13 +60,13 @@ public class WoWHeadZonePageParser extends JSoupDocumentParser<WoWHeadZone> {
 		}
 
 		String zoneContinent = wowheadMappingsProperties.getZoneContinent(wowHeadZone.getId());
-		if(zoneContinent != null) {
-		    wowHeadZone.setContinent(zoneContinent);
+		if (zoneContinent != null) {
+			wowHeadZone.setContinent(zoneContinent);
 		}
 
 		String zoneExpansion = wowheadMappingsProperties.getZoneExpansion(wowHeadZone.getId());
-		if(zoneExpansion != null) {
-		    wowHeadZone.setExpansion(zoneExpansion);
+		if (zoneExpansion != null) {
+			wowHeadZone.setExpansion(zoneExpansion);
 		}
 
 		List<WoWHeadMusicFileInfo> wowHeadMusicFileInfos = new ArrayList<WoWHeadMusicFileInfo>();
@@ -70,14 +74,14 @@ public class WoWHeadZonePageParser extends JSoupDocumentParser<WoWHeadZone> {
 		Pattern audioControlsPattern = Pattern.compile(".*new AudioControls\\(\\)\\).init\\((.*),\\$WH\\.ge\\('zonemusicdiv-zonemusic.*", Pattern.DOTALL);
 		Gson gson = new Gson();
 
-		for(Element scriptElement : scriptElements) {
-		    Matcher audioControlsMatcher = audioControlsPattern.matcher(scriptElement.data());
-		    if(audioControlsMatcher.matches()) {
-		        Collections.addAll(wowHeadMusicFileInfos, gson.fromJson(audioControlsMatcher.group(1), WoWHeadMusicFileInfo[].class));
-		    }
+		for (Element scriptElement : scriptElements) {
+			Matcher audioControlsMatcher = audioControlsPattern.matcher(scriptElement.data());
+			if (audioControlsMatcher.matches()) {
+				Collections.addAll(wowHeadMusicFileInfos, gson.fromJson(audioControlsMatcher.group(1), WoWHeadMusicFileInfo[].class));
+			}
 		}
-		for(WoWHeadMusicFileInfo wowHeadMusicFileInfo : wowHeadMusicFileInfos) {
-		    wowHeadMusicFileInfo.setZoneId(wowHeadZone.getId());
+		for (WoWHeadMusicFileInfo wowHeadMusicFileInfo : wowHeadMusicFileInfos) {
+			wowHeadMusicFileInfo.setZoneId(wowHeadZone.getId());
 		}
 		Collections.sort(wowHeadMusicFileInfos);
 
