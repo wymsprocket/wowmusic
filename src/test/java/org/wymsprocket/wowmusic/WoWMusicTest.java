@@ -62,10 +62,15 @@ public class WoWMusicTest {
 
 		musicFileInfos = new ArrayList<MusicFileInfo>(musicFileInfoMap.values());
 		Collections.sort(musicFileInfos);
-
 		for (MusicFileInfo musicFileInfo : musicFileInfos) {
 			System.out.println(musicFileInfo);
 		}
+
+		wowHeadMusicFileInfos = new ArrayList<WoWHeadMusicFileInfo>(wowHeadMusicFileInfoMap.values());
+		Collections.sort(wowHeadMusicFileInfos);
+        for (WoWHeadMusicFileInfo wowHeadMusicFileInfo : wowHeadMusicFileInfos) {
+            System.out.println(wowHeadMusicFileInfo);
+        }
 
 		// for (Long key : wowHeadMusicFileInfoMap.keySet()) {
 		// System.out.println(key + " == " + wowHeadMusicFileInfoMap.get(key));
